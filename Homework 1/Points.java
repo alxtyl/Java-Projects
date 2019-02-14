@@ -1,9 +1,9 @@
 import java.awt.Point;
 /**
- * Write a description of class Points here.
+ * CSCI 114 Homework
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @Alex Tyler
+ * @2/13/19
  */
 public class Points
 {
