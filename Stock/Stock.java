@@ -33,15 +33,9 @@ public class Stock
     
     public void changePrice(double byPercent)
     {
-      byPercent *= .01;
       double temp = stockPrice;
-      if (byPercent > 0){
-          temp *= byPercent;
-          stockPrice += temp;
-        }
-      else {
-          temp *= byPercent;
-          stockPrice += temp;
-        }
+      byPercent *= .01;
+      temp *= byPercent;
+      stockPrice += temp;
     }
 }
