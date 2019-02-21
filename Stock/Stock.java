@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class Stock here.
+ * Changes prices of stocks based info that is feed through constructor
  *
  * @Alex Tyler (your name)
  * @2/21/19
@@ -33,9 +33,12 @@ public class Stock
     
     public void changePrice(double byPercent)
     {
-      double temp = stockPrice;
-      byPercent *= .01;
-      temp *= byPercent;
-      stockPrice += temp;
+      //creating a new var to keep track of the stock percent increase/decrease
+      double stockPercent = stockPrice;
+      
+      //performing calculations
+      byPercent *= .01; 
+      stockPercent *= byPercent;
+      stockPrice += stockPercent;
     }
 }
