@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=TravelWallet
+comment0.text=\n\ This\ class\ is\ used\ for\ perfoming\ travel\ calcualtions\ with\ the\ tester\ class\n\n\ @Alex\ Tyler\n\ @02/28/2019\n
+comment1.params=dollarToForeign
+comment1.target=TravelWallet(double)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ TravelWallet\n
+comment2.params=moneySpent
+comment2.target=double\ spendLocal(double)
+comment2.text=\n\ This\ method\ is\ for\ calculating\ the\ money\ left\ in\ local\ currency\n\n\ @moneySpent\ taking\ in\ money\ being\ spent\n\ @return\ \ \ \ \ new\ local\ currency\ value\ in\ the\ wallet\n
+comment3.params=moneyBeingExchanged
+comment3.target=double\ exchangeDollarsToLocal(double)
+comment3.text=\n\ This\ method\ is\ for\ calculating\ amount\ of\ money\ that\ needs\ to\ exchanged\ from\ dollars\ to\ the\ local\n\ currency\n\n\ @moneySpent\ taking\ in\ money\ being\ spent\n\ @return\ \ \ \ \ new\ local\ currency\ value\ in\ the\ wallet\n
+comment4.params=
+comment4.target=double\ totalAmountInDollars()
+comment4.text=\n\ This\ method\ is\ for\ calculating\ the\ total\ amount\ of\ money\ left\ in\ the\ wallet\ in\ dollars\n\n\ @moneySpent\ taking\ in\ money\ being\ spent\n\ @return\ \ \ \ \ new\ local\ currency\ value\ in\ the\ wallet\n
+numComments=5
