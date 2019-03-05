@@ -10,7 +10,7 @@ public class Balloon
     // instance variables - replace the example below with your own
     private String color;
     private double size;
-    public final double PI = 3.1415926;
+    public static final double PI = 3.1415926;
 
     /**
      * Constructor for objects of class Balloon
