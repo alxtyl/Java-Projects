@@ -31,7 +31,7 @@ public class Balloon
     public double inflate(double inflateBalloon)
     {
         // put your code here
-        size *= inflateBalloon;
+        size += inflateBalloon;
         
         return size;
     }
@@ -45,7 +45,7 @@ public class Balloon
     {
         double volume;
         
-        volume = (4/3) * PI * (size * size * size);
+        volume = (4.0/3.0) * PI * (size * size * size);
         
         return volume;
     }
