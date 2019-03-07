@@ -51,7 +51,7 @@ public class Balloon
      */
     public double balloonVolume()
     {
-        double volume = 0;
+        double volume = 0.0;
         
         volume = (4.0/3.0) * PI * (size * size * size);
         
