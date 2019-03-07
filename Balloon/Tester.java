@@ -13,17 +13,22 @@ public class Tester
      */
     public static void main(String[] args)
     {
-        Scanner sc = new Scanner(System.in); //creating scanner object
+        //creating scanner object
+        Scanner sc = new Scanner(System.in);
         
+        //prompting the user for the color of the ballon
         System.out.println("Please enter the color of the ballon:");
         String userBalloonC = sc.nextLine(); //C stands for color
         
+        //prompting the user for the size of the ballon
         System.out.println("Please enter the size of the ballon:");
         double userBalloonS = sc.nextDouble(); //S stands for Size
         
-        Balloon userBalloon = new Balloon(userBalloonC, userBalloonS); //creating new object
+        //creating new ballon object based on user response
+        Balloon userBalloon = new Balloon(userBalloonC, userBalloonS);
         
-        userBalloon.inflate(5.0); //inflating the ballon by 5.0
+        //inflating the ballon by 5.0
+        userBalloon.inflate(5.0); 
         
         //displaying ballon info
         System.out.println("For the " + userBalloon.displayBalloonColor() + " ballon");
