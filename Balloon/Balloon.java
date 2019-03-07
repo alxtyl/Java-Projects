@@ -23,10 +23,10 @@ public class Balloon
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * takes in a size that a ballon will be inflated by and then returns the new size of the ballon
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param   takes in the amount that the ballon is being infalted by
+     * @return  returns the new size of the ballon
      */
     public double inflate(double inflateBalloon)
     {
@@ -36,14 +36,24 @@ public class Balloon
         return size;
     }
     
+    /**
+     * getter method for the color of the ballon
+     *
+     * @return  returns the color of the ballon
+     */
     public String displayBalloonColor()
     {
         return color;
     }
     
+    /**
+     * calculates the volume of the ballon
+     *
+     * @return  returns the volume of the ballon
+     */
     public double balloonVolume()
     {
-        double volume;
+        double volume = 0;
         
         volume = (4.0/3.0) * PI * (size * size * size);
         

@@ -1,14 +1,16 @@
 #BlueJ class context
 comment0.target=Balloon
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Balloon\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ Balloon\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=userBalloonC\ userBalloonS
 comment1.target=Balloon(java.lang.String,\ double)
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Balloon\r\n
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Balloon\n
 comment2.params=inflateBalloon
 comment2.target=double\ inflate(double)
-comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\r\n
+comment2.text=\n\ takes\ in\ a\ size\ that\ a\ ballon\ will\ be\ inflated\ by\ and\ then\ returns\ the\ new\ size\ of\ the\ ballon\n\n\ @param\ \ \ takes\ in\ the\ amount\ that\ the\ ballon\ is\ being\ infalted\ by\n\ @return\ \ returns\ the\ new\ size\ of\ the\ ballon\n
 comment3.params=
 comment3.target=java.lang.String\ displayBalloonColor()
+comment3.text=\n\ getter\ method\ for\ the\ color\ of\ the\ ballon\n\n\ @return\ \ returns\ the\ color\ of\ the\ ballon\n
 comment4.params=
 comment4.target=double\ balloonVolume()
+comment4.text=\n\ calculates\ the\ volume\ of\ the\ ballon\n\n\ @return\ \ returns\ the\ volume\ of\ the\ ballon\n
 numComments=5
