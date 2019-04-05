@@ -1,13 +1,13 @@
 
 /**
- * Write a description of class Balloon here.
+ * Takes info from the tester class and performs calculations
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @Alex Tyler
+ * @3/7/2019
  */
 public class Balloon
 {
-    // instance variables - replace the example below with your own
+    //initializing instance variables & constant
     private String color;
     private double size;
     public static final double PI = 3.1415926;
@@ -17,7 +17,6 @@ public class Balloon
      */
     public Balloon(String userBalloonC, double userBalloonS)
     {
-        // initialise instance variables
         color = userBalloonC;
         size = userBalloonS;
     }
@@ -30,7 +29,6 @@ public class Balloon
      */
     public double inflate(double inflateBalloon)
     {
-        // put your code here
         size += inflateBalloon;
         
         return size;
@@ -39,7 +37,7 @@ public class Balloon
     /**
      * getter method for the color of the ballon
      *
-     * @return  returns the color of the ballon
+     * @return color of the ballon
      */
     public String displayBalloonColor()
     {
@@ -49,11 +47,11 @@ public class Balloon
     /**
      * calculates the volume of the ballon
      *
-     * @return  returns the volume of the ballon
+     * @return volume of the ballon
      */
     public double balloonVolume()
     {
-        double volume = 0;
+        double volume = 0.0;
         
         volume = (4.0/3.0) * PI * (size * size * size);
         
