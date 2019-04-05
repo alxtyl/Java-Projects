@@ -77,20 +77,20 @@ public class Card
         }
         
         if (suit == 0) {
-          out += '\u2663';
+          out += '\u2663'; // Unicode char for club
         }
         else if (suit == 1) {
-          out += '\u2662';    
+          out += '\u2662';  // diamond 
         }
         
         else if (suit == 2) {
-         out += '\u2661'; 
+         out += '\u2661'; // heart
         }
         
         else if (suit == 3){
-         out += '\u2660';    
+         out += '\u2660'; // spade
         }
         
-        System.out.printf("%s", out);
+        System.out.printf("%s ", out);
     }
 }
