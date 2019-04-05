@@ -1,5 +1,5 @@
 
-/**
+ /**
  * Card Class is used for creating different types and returning their names
  *
  * @author Alex Tyler
@@ -21,7 +21,7 @@ public class Card
             System.exit(1);
         }
 
-        if (s < 0 || 3 < r) {
+        if (s < 0 || 3 < s) {
             System.out.println("Invalid Suit\n");
             System.exit(2);
         }
@@ -53,25 +53,44 @@ public class Card
         return suit;
     }
 
-    public String toString() {
-        String out = ""; 
-
+    public void stringOut() {
+        String out = "";
+        
+        if (rank < 10){
+            out = " " + Integer.toString(rank);
+        }
+        
+        else if (rank == 10){
+            out = Integer.toString(rank);
+        }
+        else if (rank == 11) {
+            out += " J";
+        }
+        else if (rank == 12) {
+            out += " Q";
+        }
+        else if (rank == 13) {
+            out += " K";
+        }
+        else if (rank == 14) {
+            out += " A";
+        }
+        
         if (suit == 0) {
-         out += '\u2663';
+          out += '\u2663';
         }
         else if (suit == 1) {
-         out += '\u2662';    
+          out += '\u2662';    
         }
         
         else if (suit == 2) {
          out += '\u2661'; 
         }
-           // heart
+        
         else if (suit == 3){
          out += '\u2660';    
         }
-
-        return out;
-    
+        
+        System.out.printf("%s", out);
     }
 }

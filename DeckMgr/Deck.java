@@ -1,22 +1,25 @@
-
+import java.util.*;
 /**
  * Write a description of class Deck here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Alex Tyler
+ * @version 4/11/19
  */
 public class Deck
 {
     // instance variables - replace the example below with your own
-    private int x;
+    private ArrayList<Card> cards = new ArrayList<Card>();
 
     /**
      * Constructor for objects of class Deck
      */
     public Deck()
     {
-        // initialise instance variables
-        x = 0;
+       for (int i = 2; i < 15; i++) {
+           for (int j = 0; j < 4; j++) {
+               cards.add(new Card(i, j));
+            }
+        }
     }
 
     /**
@@ -25,9 +28,9 @@ public class Deck
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public int sampleMethod(int y)
+    public int shuffle()
     {
         // put your code here
-        return x + y;
+        return 0;
     }
 }
