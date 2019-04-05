@@ -7,26 +7,27 @@
  */
 public class Card
 {
-    // instance variables
+    // constants
     private final int rank;
     private final int suit;
 
     /**
      * Constructor for objects of class Card
      */
-    public Card(int incRank, int incSuit)
+    public Card(int rank, int suit)
     {
-        // initialise instance variables
-        rank = incRank;
-        suit = incSuit;
-        
-        if (rank < 2 || rank > 14) {
-            System.out.println("Error, rank number is not valid");
+        this.rank = rank;
+        this.suit = suit;
+
+        for (int i = 2; i < 14; i++) {
+            rank = i;
         }
-        
-        if (suit < 0 || suit > 3){
-            System.out.println("Error, suit number is not valid");
+
+        for (int j = 0; j < 3; j++) {
+            suit = j;
         }
+        //add in system error stuff here
+        
     }
 
     /**
@@ -54,17 +55,22 @@ public class Card
     public String toString() {
         String out = ""; 
 
-    // put the rank into out
-    // always in 2 places, for nice formatting     
+    if (suit == 0) {
+        out += '\u2663';
+    }
+    else if (suit == 1) {
+        out += '\u2662';    
+    }
+        
+    else if (suit == 2) {
+        out += '\u2661'; 
+    }
+           // heart
+    else if (suit == 3){
+        out += '\u2660';    
+    }
 
-    // now add single, special char for suit
-    if (suit == CLUBS)
-        out += '\u2663';    // Unicode char for club
-    else if (suit == DIAMONDS)
-        out += '\u2662';    // diamond
-    else if (suit == HEARTS)
-        out += '\u2661';    // heart
-    else if (suit == SPADES)
-        out += '\u2660';    // spade
-        }
+    return out;
+    
+    }
 }
