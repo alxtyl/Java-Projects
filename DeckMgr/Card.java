@@ -3,7 +3,7 @@
  * Card Class is used for creating different types and returning their names
  *
  * @author Alex Tyler
- * @version 4/11/2019
+ * @version 4/11/19
  */
 public class Card
 {
@@ -14,20 +14,21 @@ public class Card
     /**
      * Constructor for objects of class Card
      */
-    public Card(int rank, int suit)
+    public Card(int r, int s) //r stands rank, s stands for suit
     {
-        this.rank = rank;
-        this.suit = suit;
-
-        for (int i = 2; i < 14; i++) {
-            rank = i;
+        if (r < 1 || 15 < r) {
+            System.out.println("Invalid Rank\n");
+            System.exit(1);
         }
 
-        for (int j = 0; j < 3; j++) {
-            suit = j;
+        if (s < 0 || 3 < r) {
+            System.out.println("Invalid Suit\n");
+            System.exit(2);
         }
-        //add in system error stuff here
         
+        //setting up instance variables
+        rank = r;
+        suit = s;
     }
 
     /**
@@ -55,22 +56,22 @@ public class Card
     public String toString() {
         String out = ""; 
 
-    if (suit == 0) {
-        out += '\u2663';
-    }
-    else if (suit == 1) {
-        out += '\u2662';    
-    }
+        if (suit == 0) {
+         out += '\u2663';
+        }
+        else if (suit == 1) {
+         out += '\u2662';    
+        }
         
-    else if (suit == 2) {
-        out += '\u2661'; 
-    }
+        else if (suit == 2) {
+         out += '\u2661'; 
+        }
            // heart
-    else if (suit == 3){
-        out += '\u2660';    
-    }
+        else if (suit == 3){
+         out += '\u2660';    
+        }
 
-    return out;
+        return out;
     
     }
 }

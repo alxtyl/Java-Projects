@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - DealHands",
+            "request": "launch",
+            "mainClass": "DealHands",
+            "projectName": "DeckMgr_8b6f77ed"
+        }
+    ]
+}
