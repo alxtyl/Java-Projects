@@ -46,13 +46,14 @@ public class Deck
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public void stringOutShuffle()
+    public void printDeck()
     {
        int cardCounter = 0;
       
        for (Card C: cards){ //C just stands for card to not make it confusing
            C.stringOut();
-           if (C == cards.get(12) || C == cards.get(25) || C == cards.get(38)) {
+           
+           if (cardCounter == 12 || cardCounter == 25 || cardCounter == 38) {
               System.out.println();
            }
            
@@ -69,13 +70,14 @@ public class Deck
      */
     public Card dealCard()
     {
+       Card topCard = cards.get(0);
+       cards.remove(0);
+       
        if(cards == null){
            System.out.println("Error, deck is empty");
            System.exit(1);
        }
        
-       Card topCard = cards.get(0);
-       cards.remove(0);
        return topCard;
     }
 }
