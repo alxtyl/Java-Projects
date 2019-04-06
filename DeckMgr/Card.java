@@ -79,6 +79,7 @@ public class Card
         if (suit == 0) {
           out += '\u2663'; // Unicode char for club
         }
+        
         else if (suit == 1) {
           out += '\u2662';  // diamond 
         }

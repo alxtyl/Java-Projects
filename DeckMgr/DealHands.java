@@ -28,12 +28,14 @@ public class DealHands
         
         deck1.printDeck();
         
-        //prompting the user for the color of the ballon
+        //prompting the user how many players will be playing
         System.out.println("How many players?");
         int numPlayers = sc.nextInt(); // Read user input
         
+        //creating new hand array
         hands = new ArrayList<Hand>();
         
+        //creating a new hand object for each player
         for (int i = 0; i < numPlayers; i++) {
             hands.add(new Hand());
         }
