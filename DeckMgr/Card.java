@@ -1,4 +1,3 @@
-
  /**
  * Card Class is used for creating different types and returning their names
  *
