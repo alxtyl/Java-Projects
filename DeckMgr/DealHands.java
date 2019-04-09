@@ -32,6 +32,8 @@ public class DealHands
         System.out.println("How many players?");
         int numPlayers = sc.nextInt(); // Read user input
         
+        System.out.println();
+        
         //creating new hand array
         hands = new ArrayList<Hand>();
         
@@ -53,5 +55,17 @@ public class DealHands
                 
         System.out.println("\nWhat remains");
         deck1.printDeck();
+        
+        System.out.println("\nTest error handling:");
+        
+        Card ErrorCard = new Card(-20,5);
+        
+        try {
+           for(int i = 0; i < 1000; i++) {
+             deck1.dealCard();
+        }
+        } catch(Exception err) {
+            System.out.println("deck is empty");
+        }
     }
 }

@@ -19,7 +19,7 @@ public class Deck
            for (int j = 0; j < 4; j++) {
                cards.add(new Card(i, j));
            }
-        }
+       }
     }
 
     /**
@@ -74,7 +74,7 @@ public class Deck
        cards.remove(0);
        
        if(cards == null){
-           System.out.println("Error, deck is empty");
+           System.out.println("deck is empty");
            System.exit(1);
        }
        

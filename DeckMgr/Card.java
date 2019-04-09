@@ -18,12 +18,12 @@ public class Card
     {
         if (r < 1 || 15 < r) {
             System.out.println("Invalid Rank");
-            System.exit(1);
+            //System.exit(1); commented out for error testing
         }
 
         if (s < 0 || 3 < s) {
             System.out.println("Invalid Suit");
-            System.exit(2);
+            //System.exit(2); commented out for error testing
         }
         
         //setting up instance variables
