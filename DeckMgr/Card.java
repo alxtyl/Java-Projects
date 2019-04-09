@@ -17,12 +17,12 @@ public class Card
     public Card(int r, int s) //r stands rank, s stands for suit
     {
         if (r < 1 || 15 < r) {
-            System.out.println("Invalid Rank");
+            System.out.println("Invalid Rank: " + r);
             //System.exit(1); commented out for error testing
         }
 
         if (s < 0 || 3 < s) {
-            System.out.println("Invalid Suit");
+            System.out.println("Invalid Suit: " + s);
             //System.exit(2); commented out for error testing
         }
         
