@@ -14,8 +14,7 @@ public class Hand
      * Constructor for objects of class Hand
      */
     public Hand()
-    {
-        
+    {    
     }
 
     /**
