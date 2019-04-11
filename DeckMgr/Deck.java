@@ -11,7 +11,9 @@ public class Deck
     private ArrayList<Card> cards = new ArrayList<Card>();
     
     //constants
+    public static final int MINSUIT = 2;
     public static final int MAXSUIT = 15;
+    public static final int MINRANK = 0;
     public static final int MAXRANK = 4;
     
     /**
@@ -19,8 +21,8 @@ public class Deck
      */
     public Deck()
     {
-       for (int i = 2; i < MAXSUIT; i++) {
-           for (int j = 0; j < MAXRANK; j++) {
+       for (int i = MINSUIT; i < MAXSUIT; i++) {
+           for (int j = MINRANK; j < MAXRANK; j++) {
                cards.add(new Card(i, j));
            }
        }
