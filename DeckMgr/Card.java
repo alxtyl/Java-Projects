@@ -6,20 +6,32 @@
  */
 public class Card
 {
-    // constants
-    private final int rank;
-    private final int suit;
+    //instance variables
+    private int rank;
+    private int suit;
+    
+    //constants
+    public static final int JACK = 11;
+    public static final int QUEEN = 12;
+    public static final int KING = 13;
+    public static final int ACE = 14;
+    public static final int CLUBS = 0;
+    public static final int DIAMOND = 1;
+    public static final int HEART = 2;
+    public static final int SPADE = 3;
 
     /**
      * Constructor for objects of class Card
      */
     public Card(int r, int s) //r stands rank, s stands for suit
     {
+        //making sure the card rank is valid
         if (r < 1 || 15 < r) {
             System.out.println("Invalid Rank: " + r);
             //System.exit(1); commented out for error testing
         }
-
+        
+        //making sure the card rank is valid
         if (s < 0 || 3 < s) {
             System.out.println("Invalid Suit: " + s);
             //System.exit(2); commented out for error testing
@@ -51,7 +63,13 @@ public class Card
     {
         return suit;
     }
-
+    
+    /**
+     * Sends the card rank and suit out to the screen
+     *
+     * @param N.A.
+     * @return    void
+     */
     public void stringOut() {
         String out = "";
         
@@ -62,32 +80,32 @@ public class Card
         else if (rank == 10){
             out = Integer.toString(rank);
         }
-        else if (rank == 11) {
+        else if (rank == JACK) {
             out += " J";
         }
-        else if (rank == 12) {
+        else if (rank == QUEEN) {
             out += " Q";
         }
-        else if (rank == 13) {
+        else if (rank == KING) {
             out += " K";
         }
-        else if (rank == 14) {
+        else if (rank == ACE) {
             out += " A";
         }
         
-        if (suit == 0) {
+        if (suit == CLUBS) {
           out += '\u2663'; // Unicode char for club
         }
         
-        else if (suit == 1) {
+        else if (suit == DIAMOND) {
           out += '\u2662';  // diamond 
         }
         
-        else if (suit == 2) {
+        else if (suit == HEART) {
          out += '\u2661'; // heart
         }
         
-        else if (suit == 3){
+        else if (suit == SPADE){
          out += '\u2660'; // spade
         }
         

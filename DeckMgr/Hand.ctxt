@@ -1,13 +1,13 @@
 #BlueJ class context
 comment0.target=Hand
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Hand\ here.\r\n\r\n\ @author\ Alex\ Tyler\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ This\ class\ is\ used\ for\ adding\ cards\ and\ displaying\ the\ hands\r\n\r\n\ @author\ Alex\ Tyler\r\n\ @version\ 4/11/19\r\n
 comment1.params=
 comment1.target=Hand()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Hand\r\n
 comment2.params=C
 comment2.target=void\ addCards(Card)
-comment2.text=\r\n\ addCard\ Method\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ void\r\n
+comment2.text=\r\n\ addCard\ adds\ card\ when\ called\r\n\r\n\ @param\ Take\ in\ object\ Card\r\n\ @return\ void\r\n
 comment3.params=
 comment3.target=void\ printHand()
-comment3.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\r\n
+comment3.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ \ N.A.\r\n\ @return\ \ \ void\r\n
 numComments=4

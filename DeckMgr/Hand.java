@@ -1,9 +1,9 @@
 import java.util.*;
 /**
- * Write a description of class Hand here.
+ * This class is used for adding cards and displaying the hands
  *
  * @author Alex Tyler
- * @version (a version number or a date)
+ * @version 4/11/19
  */
 public class Hand
 {
@@ -18,9 +18,9 @@ public class Hand
     }
 
     /**
-     * addCard Method
+     * addCard adds card when called
      *
-     * @param  y  a sample parameter for a method
+     * @param Take in object Card
      * @return void
      */
     public void addCards(Card C)
@@ -31,8 +31,8 @@ public class Hand
     /**
      * An example of a method - replace this comment with your own
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param  N.A.
+     * @return   void
      */
     public void printHand()
     {

@@ -1,32 +1,36 @@
 import java.util.*;
 /**
- * Write a description of class Deck here.
+ * Generates new cards, shuffles and prints out the deck
  *
  * @author Alex Tyler
  * @version 4/11/19
  */
 public class Deck
 {
-    // instance variables - replace the example below with your own
+    // instance variable
     private ArrayList<Card> cards = new ArrayList<Card>();
-
+    
+    //constants
+    public static final int MAXSUIT = 15;
+    public static final int MAXRANK = 4;
+    
     /**
      * Constructor for objects of class Deck
      */
     public Deck()
     {
-       for (int i = 2; i < 15; i++) {
-           for (int j = 0; j < 4; j++) {
+       for (int i = 2; i < MAXSUIT; i++) {
+           for (int j = 0; j < MAXRANK; j++) {
                cards.add(new Card(i, j));
            }
        }
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Shuffles the deck into a random order using random ints
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param  N.A.
+     * @return  void
      */
     public void shuffle()
     {
@@ -41,10 +45,10 @@ public class Deck
     }
     
     /**
-     * An example of a method - replace this comment with your own
+     * Prints out the deck
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param  N.A.
+     * @return    void
      */
     public void printDeck()
     {
@@ -53,6 +57,7 @@ public class Deck
        for (Card C: cards){ //C just stands for card to not make it confusing
            C.stringOut();
            
+           //breaks the deck every 13 lines for readability
            if (cardCounter == 12 || cardCounter == 25 || cardCounter == 38) {
               System.out.println();
            }
@@ -63,17 +68,17 @@ public class Deck
     }
     
     /**
-     * An example of a method - replace this comment with your own
+     * Deals a card and removes it from the array after
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param  N.A.
+     * @return      Card object
      */
     public Card dealCard()
     {
        Card topCard = cards.get(0);
        cards.remove(0);
        
-       if(cards == null){
+       if(cards == null){ //making sure the deck can't deal any cards when it's empty
            System.out.println("deck is empty");
            System.exit(1);
        }
