@@ -7,6 +7,10 @@
 # BlueJ files
 *.ctxt
 
+# JavaDoc Files
+*.html
+*.css
+
 # Package Files
 *.jar
 *.war
