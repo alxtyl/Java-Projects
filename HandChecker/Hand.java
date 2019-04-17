@@ -15,7 +15,8 @@ public class Hand
      */
     public Hand(Card first, Card second, Card third, Card fourth, Card fifth)
     {   
-        
+       ArrayList<Card> Hand = new ArrayList<Card>();
+       
        Hand.add(first);
        Hand.add(second);
        Hand.add(third);
@@ -55,7 +56,10 @@ public class Hand
      */
     private boolean hasAce()
     {
-       
+        
+        
         return true;
     }
+    
+    
 }

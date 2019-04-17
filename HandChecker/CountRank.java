@@ -1,22 +1,29 @@
 
 /**
- * Write a description of class CountRank here.
+ * Determines what count of the hand is
  *
  * @author Alex Tyler
- * @version 4/15/19
+ * @version 4/25/19
  */
 public class CountRank
 {
     // instance variables
     private int rankCount[];
-
+    
+    //constants
+    public static final int MAXHANDSIZE = 5;
+    public static final int MAXRANK = 15;
+    
     /**
      * Constructor for objects of class CountRank
      */
-    public CountRank(Hand h)
+    public CountRank(Hand h) 
     {
-        // initialise instance variables
+        rankCount = new int[MAXRANK];
         
+        for(int i = 0; i < MAXHANDSIZE; i++) {
+            rankCount[h.getCard(i).getCardRank()]++;
+        }
     }
 
     /**
@@ -27,9 +34,14 @@ public class CountRank
      */
     public boolean fourOfAKind()
     {
-        // put your code here
         
-        return true;
+        for (int i: rankCount) {
+            if (i == 4) {
+                return true;
+            }
+        }
+        
+        return false;
     }
     
     /**

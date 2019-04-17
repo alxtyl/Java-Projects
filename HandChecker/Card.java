@@ -26,7 +26,7 @@ public class Card
     public Card(int r, int s) //r stands rank, s stands for suit
     {
         //making sure the card rank is valid
-        if (r < 1 || 15 < r) {
+        if (r < CLUBS || ACE < r) {
             System.out.println("Invalid Rank: " + r);
             //System.exit(1); commented out for error testing
         }
@@ -48,7 +48,7 @@ public class Card
      * @param cardRank  takes in the needed card that needs to be returned
      * @return    returns card rank
      */
-    public int printCardRank(int cardRank)
+    public int getCardRank()
     {
         return rank;
     }
