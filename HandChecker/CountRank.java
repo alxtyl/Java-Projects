@@ -67,7 +67,7 @@ public class CountRank
     {
         for(int i: rankCount) { 
             for(int j: rankCount) { 
-                if(i == 2 && j == 3) { //testing for three of a kind and a pair
+                if(i == 2 && j == 3) {
                     return true;
                 }
             }
