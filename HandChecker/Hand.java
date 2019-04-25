@@ -77,7 +77,7 @@ public class Hand
     /**
      * Returns the category of a hand.
      *
-     * @param void
+     * @param none
      * @return the int value of the type of hand
      */
     public int category()
@@ -118,7 +118,7 @@ public class Hand
     /**
      * royalFlush() method returns true if the hand is a royal flush.
      *
-     * @param void
+     * @param none
      * @return true/false
      */
     public boolean royalFlush()
@@ -135,7 +135,7 @@ public class Hand
     /**
      * straightFlush() method returns true if the hand is a straight flush.
      *
-     * @param void
+     * @param none
      * @return true/false
      */
     public boolean straightFlush()
@@ -157,7 +157,7 @@ public class Hand
     /**
      * acesLow() returns true if the hand has a low ace.
      *
-     * @param void
+     * @param none
      * @return true/false
      */
     public boolean acesLow()
@@ -171,7 +171,7 @@ public class Hand
     /**
      * fourOfAKind() returns true if the hand is has four of a kind.
      *
-     * @param void
+     * @param none
      * @return true/false
      */
     public boolean fourOfAKind()
@@ -185,7 +185,7 @@ public class Hand
     /**
      * fullHouse() returns true if the hand is a full house.
      *
-     * @param void
+     * @param none
      * @return true/false
      */
     public boolean fullHouse()
@@ -199,7 +199,7 @@ public class Hand
     /**
      * flush() returns true if the hand is a flush.
      *
-     * @param void
+     * @param none
      * @return true/false
      */
     public boolean flush()
@@ -217,7 +217,7 @@ public class Hand
     /**
      * straight() returns true if the hand is a straight.
      *
-     * @param void
+     * @param none
      * @return true/false
      */
     public boolean straight()
@@ -231,7 +231,7 @@ public class Hand
     /**
      * threeOfAKind() returns true if the hand is a three of a kind.
      *
-     * @param void
+     * @param none
      * @return true/false
      */
     public boolean threeOfAKind()
@@ -245,7 +245,7 @@ public class Hand
     /**
      * twoPair() returns true if the hand has two pair.
      *
-     * @param void
+     * @param none
      * @return true/false
      */
     public boolean twoPair()
@@ -259,7 +259,7 @@ public class Hand
     /**
      * onePair() returns true if the hand has one pair.
      *
-     * @param void
+     * @param none
      * @return true/false
      */
     public boolean onePair()
@@ -273,7 +273,7 @@ public class Hand
     /**
      * hasAce() returns true if the hand has one ace.
      *
-     * @param void
+     * @param none
      * @return true/false
      */
     public boolean hasAce()
