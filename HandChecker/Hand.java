@@ -116,10 +116,10 @@ public class Hand
     }
     
     /**
-     * Returns true if the hand is a royal flush.
+     * royalFlush() method returns true if the hand is a royal flush.
      *
      * @param void
-     * @return true or false based on result of the hannd
+     * @return true/false
      */
     public boolean royalFlush()
     {
@@ -133,10 +133,10 @@ public class Hand
     }
 
     /**
-     * Returns true if the hand is a straight flush.
+     * straightFlush() method returns true if the hand is a straight flush.
      *
      * @param void
-     * @return true or false based on result of the hand
+     * @return true/false
      */
     public boolean straightFlush()
     {
@@ -155,10 +155,10 @@ public class Hand
     }
 
     /**
-     * Returns true if the hand is has a low ace.
+     * acesLow() returns true if the hand has a low ace.
      *
      * @param void
-     * @return true or false based on result of the hand
+     * @return true/false
      */
     public boolean acesLow()
     {
@@ -169,10 +169,10 @@ public class Hand
     }
 
     /**
-     * Returns true if the hand is has four of a kind.
+     * fourOfAKind() returns true if the hand is has four of a kind.
      *
      * @param void
-     * @return true or false based on result of the hand
+     * @return true/false
      */
     public boolean fourOfAKind()
     {
@@ -183,10 +183,10 @@ public class Hand
     }
     
     /**
-     * Returns true if the hand is a full house.
+     * fullHouse() returns true if the hand is a full house.
      *
      * @param void
-     * @return true or false based on result of the hand
+     * @return true/false
      */
     public boolean fullHouse()
     {
@@ -197,10 +197,10 @@ public class Hand
     }
     
     /**
-     * Returns true if the hand is a flush.
+     * flush() returns true if the hand is a flush.
      *
      * @param void
-     * @return true or false based on result of the hand
+     * @return true/false
      */
     public boolean flush()
     {
@@ -215,10 +215,10 @@ public class Hand
     }
     
     /**
-     * Returns true if the hand is a straight.
+     * straight() returns true if the hand is a straight.
      *
      * @param void
-     * @return true or false based on result of the hand
+     * @return true/false
      */
     public boolean straight()
     {
@@ -229,10 +229,10 @@ public class Hand
     }
 
     /**
-     * Returns true if the hand is a three of a kind.
+     * threeOfAKind() returns true if the hand is a three of a kind.
      *
      * @param void
-     * @return true or false based on result of the hand
+     * @return true/false
      */
     public boolean threeOfAKind()
     {
@@ -243,10 +243,10 @@ public class Hand
     }
 
     /**
-     * Returns true if the hand has two pair.
+     * twoPair() returns true if the hand has two pair.
      *
      * @param void
-     * @return true or false based on result of the hand
+     * @return true/false
      */
     public boolean twoPair()
     {
@@ -257,10 +257,10 @@ public class Hand
     }
 
     /**
-     * Returns true if the hand has one pair.
+     * onePair() returns true if the hand has one pair.
      *
      * @param void
-     * @return true or false based on result of the hand
+     * @return true/false
      */
     public boolean onePair()
     {
@@ -271,10 +271,10 @@ public class Hand
     }
 
     /**
-     * Returns true if the hand has one ace.
+     * hasAce() returns true if the hand has one ace.
      *
      * @param void
-     * @return true or false based on result of the hand
+     * @return true/false
      */
     public boolean hasAce()
     {
