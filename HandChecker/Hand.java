@@ -3,7 +3,7 @@ import java.util.*;
  * This class is used for adding cards and displaying the hands
  *
  * @author Alex Tyler
- * @version 4/11/19
+ * @version 4/25/19
  */
 public class Hand
 {
