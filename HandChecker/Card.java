@@ -48,7 +48,7 @@ public class Card
      * @param cardRank  takes in the needed card that needs to be returned
      * @return    returns card rank
      */
-    public int getCardRank()
+    public int getRank()
     {
         return rank;
     }
@@ -59,7 +59,7 @@ public class Card
      * @param cardSuit  takes in the needed card that needs to be returned
      * @return    returns card suit
      */
-    public int printCardSuit(int cardSuit)
+    public int getSuit()
     {
         return suit;
     }
@@ -70,8 +70,8 @@ public class Card
      * @param N.A.
      * @return    void
      */
-    public void stringOut() {
-        String out = "";
+    public String toString() {
+        String out = " ";
         
         if (rank < 10){
             out = " " + Integer.toString(rank);
@@ -109,6 +109,6 @@ public class Card
          out += '\u2660'; // spade
         }
         
-        System.out.printf("%s ", out);
+        return out;
     }
 }
