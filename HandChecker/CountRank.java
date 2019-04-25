@@ -1,12 +1,12 @@
 /**
- * Determines what count of the hand is
+ * Determines what the count of the hand is
  *
  * @author Alex Tyler
  * @version 4/25/19
  */
 public class CountRank
 {
-    // instance variables
+    // instance variable
     private int rankCount[];
     
     //constants
