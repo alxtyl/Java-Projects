@@ -73,7 +73,7 @@ public class Card
     public String stringOut() {
         String out = "";
         
-        if (rank < 10){
+        if (rank <= 10){
             out = " " + Integer.toString(rank);
         }
         
