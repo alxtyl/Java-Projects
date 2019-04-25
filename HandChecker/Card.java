@@ -11,6 +11,7 @@ public class Card
     private int suit;
     
     //constants
+    public static final int ACE_LOW = 2;
     public static final int JACK = 11;
     public static final int QUEEN = 12;
     public static final int KING = 13;
@@ -26,7 +27,7 @@ public class Card
     public Card(int r, int s) //r stands rank, s stands for suit
     {
         //making sure the card rank is valid
-        if (r < 2 || ACE < r) {
+        if (r < ACE_LOW || ACE < r) {
             System.out.println("Invalid Rank: " + r);
             //System.exit(1); commented out for error testing
         }
@@ -68,7 +69,7 @@ public class Card
      * Sends the card rank and suit out to the screen
      *
      * @param N.A.
-     * @return    void
+     * @return void
      */
     public String stringOut() {
         String out = "";
@@ -105,7 +106,7 @@ public class Card
          out += '\u2661'; // heart
         }
         
-        else if (suit == SPADE){
+        else if (suit == SPADE) {
          out += '\u2660'; // spade
         }
         

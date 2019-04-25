@@ -54,9 +54,8 @@ public class Hand
     {
         String out = "["; // initialize an empty string
         
-        for(int i = 0; i < HANDSIZE; i++) //for every Card in ArrayList cards
-        {
-        out += cards.get(i).stringOut(); //outputs string representation of card
+        for(int i = 0; i < HANDSIZE; i++) { //for every Card in ArrayList cards 
+            out += cards.get(i).stringOut(); //outputs string representation of card
         }
         
         System.out.println(); //spacing
@@ -67,7 +66,7 @@ public class Hand
     /**
      * Returns the specific card
      *
-     * @param take in card num to be returned
+     * @param card num to be returned
      * @return returns specified card object
      */
     public Card getCard(int i)
@@ -83,130 +82,205 @@ public class Hand
      */
     public int category()
     {
-        if(royalFlush())
+        if(royalFlush()) {
             return ROYAL_FLUSH;
-        else if(acesLow())
+        }
+        else if(acesLow()) {
             return ACES_LOW;
-        else if(straightFlush())
+        }
+        else if(straightFlush()) {
             return STRAIGHT_FLUSH;
-        else if(fourOfAKind())
+        }
+        else if(fourOfAKind()) {
             return FOUR_OF_A_KIND;
-        else if(fullHouse())
+        }
+        else if(fullHouse()) {
             return FULL_HOUSE;
-        else if(flush())
+        }
+        else if(flush()) {
             return FLUSH;
-        else if(straight())
-            return STRAIGHT;       
-        else if(threeOfAKind())
+        }
+        else if(straight()) {
+            return STRAIGHT;    
+        }   
+        else if(threeOfAKind()) {
             return THREE_OF_A_KIND;
-        else if(twoPair())
+        }
+        else if(twoPair()) {
             return TWO_PAIR;
-        else if(onePair())
+        }
+        else if(onePair()) {
             return ONE_PAIR;
+        }
         return NO_PAIR;
     }
     
     /**
-     * Returns true if this hand is a royal flush.
+     * Returns true if the hand is a royal flush.
      *
      * @param void
      * @return true or false based on result of the hannd
      */
     public boolean royalFlush()
     {
-        int suit = 0;
-
-        suit = cards.get(0).getSuit();
-
-        for(int i = 1; i < HANDSIZE; i++) {
-            if(cards.get(i).getSuit() != suit) {
-                return false;
-            }
-        }
-
-        if(cards.get(0).getRank() == 10 && cards.get(1).getRank() == J && cards.get(2).getRank() == Q && cards.get(3).getRank() == K && cards.get(4).getRank() == A) {
-            return true;    
-        }            
-        return false;
+        int suit = cards.get(0).getSuit(); 
+            for(Card c: this.cards) {
+                if(!(new CountRank(this).straight()) || c.getRank() < 10 || c.getSuit() != suit) {
+                    return false;
+                }
+            }  
+        return true;
     }
 
+    /**
+     * Returns true if the hand is a straight flush.
+     *
+     * @param void
+     * @return true or false based on result of the hand
+     */
     public boolean straightFlush()
     {
         int suit = cards.get(0).getSuit();
         
         if(new CountRank(this).straight())
         {
-            for(int i = 1; i < HANDSIZE; i++)
-                if(cards.get(i).getSuit() != suit)
+            for(int i = 1; i < HANDSIZE; i++) {
+                if(cards.get(i).getSuit() != suit) {
                     return false;
+                }
+            }
             return true; 
         }
         return false;
     }
 
+    /**
+     * Returns true if the hand is has a low ace.
+     *
+     * @param void
+     * @return true or false based on result of the hand
+     */
     public boolean acesLow()
     {
-        if(new CountRank(this).acesLow())
+        if(new CountRank(this).acesLow()) {
             return true;
+        }
         return false; 
     }
 
+    /**
+     * Returns true if the hand is has four of a kind.
+     *
+     * @param void
+     * @return true or false based on result of the hand
+     */
     public boolean fourOfAKind()
     {
-        if(new CountRank(this).fourOfAKind())
+        if(new CountRank(this).fourOfAKind()) {
             return true;
+        }
         return false;
     }
     
+    /**
+     * Returns true if the hand is a full house.
+     *
+     * @param void
+     * @return true or false based on result of the hand
+     */
     public boolean fullHouse()
     {
-        if(new CountRank(this).fullHouse())
+        if(new CountRank(this).fullHouse()) {
             return true;
+        }
         return false;
     }
     
+    /**
+     * Returns true if the hand is a flush.
+     *
+     * @param void
+     * @return true or false based on result of the hand
+     */
     public boolean flush()
     {
         int suit = cards.get(0).getSuit();
         
-        for(int i = 1; i < HANDSIZE; i++)
-            if(cards.get(i).getSuit() != suit)
+        for(int i = 1; i < HANDSIZE; i++) {
+            if(cards.get(i).getSuit() != suit) {
                 return false;
+            }
+        }   
         return true;
     }
     
+    /**
+     * Returns true if the hand is a straight.
+     *
+     * @param void
+     * @return true or false based on result of the hand
+     */
     public boolean straight()
     {
-        if(new CountRank(this).straight())
+        if(new CountRank(this).straight()) {
             return true;
+        }
         return false;        
     }
 
+    /**
+     * Returns true if the hand is a three of a kind.
+     *
+     * @param void
+     * @return true or false based on result of the hand
+     */
     public boolean threeOfAKind()
     {
-        if(new CountRank(this).threeOfAKind())
+        if(new CountRank(this).threeOfAKind()) {
             return true;
+        }
         return false;        
     }
 
+    /**
+     * Returns true if the hand has two pair.
+     *
+     * @param void
+     * @return true or false based on result of the hand
+     */
     public boolean twoPair()
     {
-        if(new CountRank(this).twoPair())
+        if(new CountRank(this).twoPair()) {
             return true;
+        }
         return false;        
     }
 
+    /**
+     * Returns true if the hand has one pair.
+     *
+     * @param void
+     * @return true or false based on result of the hand
+     */
     public boolean onePair()
     {
-        if(new CountRank(this).onePair())
+        if(new CountRank(this).onePair()) {
             return true;
+        }
         return false;        
     }
 
+    /**
+     * Returns true if the hand has one ace.
+     *
+     * @param void
+     * @return true or false based on result of the hand
+     */
     public boolean hasAce()
     {
-        if(new CountRank(this).hasAce())
+        if(new CountRank(this).hasAce()) {
             return true;
+        }
         return false;        
     }
 }

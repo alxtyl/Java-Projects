@@ -11,6 +11,8 @@ public class CountRank
     
     //constants
     public static final int HANDSIZE = 5;
+    public static final int MAXNONFACECARD = 11;
+    public static final int ACE = 14;
     public static final int MAXRANK = 15;
     
     /**
@@ -33,8 +35,9 @@ public class CountRank
      */
     public boolean acesLow()
     {
-        if(rankCount[14] == 1 && rankCount[2] == 1 && rankCount[3] == 1 && rankCount[4] == 1 && rankCount[5] == 1)
-                return true;
+        if(rankCount[ACE] == 1 && rankCount[2] == 1 && rankCount[3] == 1 && rankCount[4] == 1 && rankCount[5] == 1) {
+            return true;
+        }
         return false;
     } 
 
@@ -46,8 +49,7 @@ public class CountRank
      */
     public boolean fourOfAKind()
     {
-        for(int i: rankCount)
-        { 
+        for(int i: rankCount) { 
             if(i == 4) {
                 return true;
             }
@@ -63,11 +65,9 @@ public class CountRank
      */
     public boolean fullHouse()
     {
-        for(int i: rankCount)
-        { 
-            for(int j: rankCount)
-            { 
-                if(i == 2 && j == 3) {
+        for(int i: rankCount) { 
+            for(int j: rankCount) { 
+                if(i == 2 && j == 3) { //testing for three of a kind and a pair
                     return true;
                 }
             }
@@ -83,10 +83,10 @@ public class CountRank
      */
     public boolean straight()
     {
-        for(int i = 2; i < 11; i++)
-        { 
-            if(rankCount[i] == 1 && rankCount[i+1] == 1 && rankCount[i+2] == 1 && rankCount[i+3] == 1 && rankCount[i+4] == 1)
+        for(int i = 2; i < MAXNONFACECARD; i++) { 
+            if(rankCount[i] == 1 && rankCount[i+1] == 1 && rankCount[i+2] == 1 && rankCount[i+3] == 1 && rankCount[i+4] == 1) {
                 return true;
+            }
         }
         return false;
     }
@@ -101,8 +101,9 @@ public class CountRank
     {
         for(int i: rankCount)
         { 
-            if(i == 3)
+            if(i == 3) { 
                 return true;
+            }
         }
         return false;
     }
@@ -117,13 +118,13 @@ public class CountRank
     {
         int pairs = 0;
         
-        for(int i = 2; i < 15; i++)
-        { 
+        for(int i = 2; i < MAXRANK; i++) { 
             if(rankCount[i] == 2)
                 pairs++;
         }
-        if(pairs == 2)
+        if(pairs == 2) {
             return true;
+        }
         return false;
     }
 
@@ -137,11 +138,15 @@ public class CountRank
     {
         int pairs = 0;
         
-        for(int i = 2; i < 15; i++)
-            if(rankCount[i] == 2)
-                    pairs++;
-        if(pairs == 1)
+        for(int i = 2; i < MAXRANK; i++) {
+            if(rankCount[i] == 2) {
+                pairs++;
+            }
+        }
+
+        if(pairs == 1) {
             return true;
+        }
         return false;
     }
 
@@ -153,8 +158,9 @@ public class CountRank
      */
     public boolean hasAce()
     {
-        if(rankCount[14] == 2)
+        if(rankCount[14] == 2) {
             return true;
+        }
         return false;
     }
 }
