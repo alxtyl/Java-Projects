@@ -158,7 +158,7 @@ public class CountRank
      */
     public boolean hasAce()
     {
-        if(rankCount[14] == 2) {
+        if(rankCount[ACE] == 2) {
             return true;
         }
         return false;
