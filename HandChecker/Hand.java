@@ -37,7 +37,6 @@ public class Hand
      */
     public Hand(Card first, Card second, Card third, Card fourth, Card fifth)
     {   
-       
        cards.add(first);
        cards.add(second);
        cards.add(third);
@@ -46,17 +45,37 @@ public class Hand
     }
 
     /**
-     * addCard adds card when called
+     * stringOut() method - outputs the values of the Card objects in the cards[] ArrayList
      *
-     * @param take in card rank to be returned
+     * @param  none
+     * @return string
+     */
+    public String stringOut()
+    {
+        String out = "["; // initialize an empty string
+        
+        for(int i = 0; i < HANDSIZE; i++) //for every Card in ArrayList cards
+        {
+        out += cards.get(i).stringOut(); //outputs string representation of card
+        }
+        
+        System.out.println(); //spacing
+        
+        return (out += "]");
+    }
+
+    /**
+     * Returns the specific card
+     *
+     * @param take in card num to be returned
      * @return returns specified card object
      */
     public Card getCard(int i)
     {
         return cards.get(i);
     }
-    
-     /**
+  
+    /**
      * Returns the category of a hand.
      *
      * @param void
@@ -66,23 +85,23 @@ public class Hand
     {
         if(royalFlush())
             return ROYAL_FLUSH;
-        if(acesLow())
+        else if(acesLow())
             return ACES_LOW;
-        if(straightFlush())
+        else if(straightFlush())
             return STRAIGHT_FLUSH;
-        if(fourOfAKind())
+        else if(fourOfAKind())
             return FOUR_OF_A_KIND;
-        if(fullHouse())
+        else if(fullHouse())
             return FULL_HOUSE;
-        if(flush())
+        else if(flush())
             return FLUSH;
-        if(straight())
+        else if(straight())
             return STRAIGHT;       
-        if(threeOfAKind())
+        else if(threeOfAKind())
             return THREE_OF_A_KIND;
-        if(twoPair())
+        else if(twoPair())
             return TWO_PAIR;
-        if(onePair())
+        else if(onePair())
             return ONE_PAIR;
         return NO_PAIR;
     }
@@ -150,7 +169,7 @@ public class Hand
     {
         int suit = cards.get(0).getSuit();
         
-        for(int i = 1; i < 5; i++)
+        for(int i = 1; i < HANDSIZE; i++)
             if(cards.get(i).getSuit() != suit)
                 return false;
         return true;

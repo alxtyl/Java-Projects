@@ -2,7 +2,7 @@
  * Card Class is used for creating different types and returning their names
  *
  * @author Alex Tyler
- * @version 4/11/19
+ * @version 4/25/19
  */
 public class Card
 {
@@ -26,13 +26,13 @@ public class Card
     public Card(int r, int s) //r stands rank, s stands for suit
     {
         //making sure the card rank is valid
-        if (r < CLUBS || ACE < r) {
+        if (r < 2 || ACE < r) {
             System.out.println("Invalid Rank: " + r);
             //System.exit(1); commented out for error testing
         }
         
         //making sure the card rank is valid
-        if (s < 0 || 3 < s) {
+        if (s < CLUBS || SPADE < s) {
             System.out.println("Invalid Suit: " + s);
             //System.exit(2); commented out for error testing
         }
@@ -70,8 +70,8 @@ public class Card
      * @param N.A.
      * @return    void
      */
-    public String toString() {
-        String out = " ";
+    public String stringOut() {
+        String out = "";
         
         if (rank < 10){
             out = " " + Integer.toString(rank);

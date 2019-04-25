@@ -1,4 +1,3 @@
-
 /**
  * Determines what count of the hand is
  *
