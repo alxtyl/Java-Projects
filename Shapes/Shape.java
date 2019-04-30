@@ -1,22 +1,20 @@
 
 /**
- * Write a description of class Shape here.
+ * Implements a shape super class
  *
  * @author (your name)
  * @version (a version number or a date)
  */
 public class Shape
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+    private double s;
+  
     /**
      * Constructor for objects of class Shape
      */
-    public Shape()
+    public Shape(double side)
     {
-        // initialise instance variables
-        x = 0;
+        s = side;
     }
 
     /**
@@ -25,9 +23,26 @@ public class Shape
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public int sampleMethod(int y)
+    public boolean shapeFilled(boolean filled)
     {
-        // put your code here
-        return x + y;
+        if (filled == true) {
+            return true;
+        }
+        
+        else {
+            return false;
+        }
+    }
+    
+    /**
+     * An example of a method - replace this comment with your own
+     *
+     * @param  y  a sample parameter for a method
+     * @return    the sum of x and y
+     */
+    public double area()
+    {
+        
+        return 0.0;
     }
 }

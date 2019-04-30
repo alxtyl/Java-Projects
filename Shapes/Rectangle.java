@@ -5,29 +5,20 @@
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Rectangle
+public class Rectangle extends Shape
 {
     // instance variables - replace the example below with your own
-    private int x;
+    private double lenght;
+    private double width;
 
     /**
      * Constructor for objects of class Rectangle
      */
-    public Rectangle()
+    public Rectangle(double l, double w)
     {
-        // initialise instance variables
-        x = 0;
+        super(l) = length;
+        
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+    
 }

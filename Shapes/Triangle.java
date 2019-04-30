@@ -5,18 +5,19 @@
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Triangle
+public class Triangle extends Shape
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    // instance variables
+    private double side1, side2, side3;
+    
 
     /**
      * Constructor for objects of class Triangle
      */
-    public Triangle()
+    public Triangle(double side, double side, double side)
     {
         // initialise instance variables
-        x = 0;
+        super(side1);
     }
 
     /**
@@ -25,9 +26,30 @@ public class Triangle
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public int sampleMethod(int y)
+    public double trianglePerimeter()
     {
-        // put your code here
-        return x + y;
+        return side1 + side2 + side3;
+    }
+    
+    /**
+     * An example of a method - replace this comment with your own
+     *
+     * @param  y  a sample parameter for a method
+     * @return    the sum of x and y
+     */
+    public double area()
+    {
+        return (side2 / 2.0) * side1;
+    }
+    
+    /**
+     * An example of a method - replace this comment with your own
+     *
+     * @param  y  a sample parameter for a method
+     * @return    the sum of x and y
+     */
+    public String toString(String name)
+    {
+        return name;
     }
 }
