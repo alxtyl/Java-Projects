@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Rectangle
+comment0.text=\r\n\ Used\ for\ building\ the\ rectangle\ class\r\n\r\n\ @Alex\ Tyler\r\n\ @5/9/19\r\n
+comment1.params=l\ w\ rectColor\ rectFilled
+comment1.target=Rectangle(double,\ double,\ java.lang.String,\ java.lang.Boolean)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Rectangle\r\n
+comment2.params=
+comment2.target=double\ area()
+comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\r\n
+comment3.params=
+comment3.target=double\ perimeter()
+comment3.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\r\n
+numComments=4

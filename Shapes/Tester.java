@@ -26,24 +26,38 @@ public class Tester
         System.out.println("Starting shapes\n");
 
         for (Shape arrayShape: shapes) {
-            System.out.printf("[color=" + arrayShape.toString() + ",");
+            System.out.println("For " + arrayShape.getClass().getName() + ":");
+            System.out.println("The color of the shape is: " + arrayShape.toString());
             
-            if (arrayShape.toBoolean() == true) {
-                System.out.printf("filled=" + arrayShape.toBoolean() + "]");
+            if (arrayShape.toBoolean() == true){
+                System.out.println("The shape is filled");
             }
-
             else {
-                System.out.printf("Filled=" + arrayShape.toBoolean());
+                System.out.println("The shape is empty");
             }
-
-            System.out.printf("[length=" + arrayShape.perimeter() + ",");
-            System.out.printf("width=" + arrayShape.area());
-            System.out.println("]\n");
+            
+            System.out.printf("The perimeter is: %.2f\n", arrayShape.perimeter());
+            System.out.printf("The area is: %.2f\n\n", arrayShape.area());
         }
 
-        
+        shapes.set(0, new Triangle(3.0, 2.5, 2.0,"White", false));
+        shapes.set(1, new Rectangle(2.0, 4.0, "Blue", true));
+        shapes.set(2, new Circle(1.0, "Black", true));
 
-        System.out.print("Changed shapes");
+        System.out.println("Changed shapes\n");
+        
+        for (Shape arrayShape: shapes) {
+            System.out.println("For " + arrayShape.getClass().getName() + ":");
+            System.out.println("The color of the shape is now: " + arrayShape.toString());
+            
+            if (arrayShape.toBoolean() == true){
+                System.out.println("The shape is now filled\n");
+            }
+            else {
+                System.out.println("The shape is now empty\n");
+            }
+            
+        }
 
 
     }
