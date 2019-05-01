@@ -1,4 +1,4 @@
-
+import java.util.*;
 /**
  * Write a description of class Tester here.
  *
@@ -7,27 +7,44 @@
  */
 public class Tester
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
     /**
-     * Constructor for objects of class Tester
+     * main() method
      */
-    public Tester()
+    public static void main(String[] args) 
     {
-        // initialise instance variables
-        x = 0;
-    }
+        ArrayList<Shape> shapes = new ArrayList<Shape>();
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+        Triangle tri = new Triangle(3.0, 2.5, 2.0,"White", true);
+        shapes.add(tri);
+
+        Rectangle rect = new Rectangle(2.0, 4.0, "Red", true);
+        shapes.add(rect);
+        
+        Circle circ = new Circle(1.0, "Yellow", false);
+        shapes.add(circ);
+
+        System.out.println("Starting shapes\n");
+
+        for (Shape arrayShape: shapes) {
+            System.out.printf("[color=" + arrayShape.toString() + ",");
+            
+            if (arrayShape.toBoolean() == true) {
+                System.out.printf("filled=" + arrayShape.toBoolean() + "]");
+            }
+
+            else {
+                System.out.printf("Filled=" + arrayShape.toBoolean());
+            }
+
+            System.out.printf("[length=" + arrayShape.perimeter() + ",");
+            System.out.printf("width=" + arrayShape.area());
+            System.out.println("]\n");
+        }
+
+        
+
+        System.out.print("Changed shapes");
+
+
     }
 }

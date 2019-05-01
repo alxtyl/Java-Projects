@@ -10,14 +10,18 @@ public class Triangle extends Shape
     // instance variables
     private double side1, side2, side3;
     
-
     /**
      * Constructor for objects of class Triangle
      */
-    public Triangle(double side, double side, double side)
+    public Triangle(double s1, double s2, double s3, String triColor, boolean triFilled)
     {
         // initialise instance variables
-        super(side1);
+        super(triColor, triFilled);
+
+
+        this.side1 = s1;
+        this.side2 = s2;
+        this.side3 = s3;
     }
 
     /**
@@ -26,7 +30,7 @@ public class Triangle extends Shape
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public double trianglePerimeter()
+    public double perimeter()
     {
         return side1 + side2 + side3;
     }
@@ -42,14 +46,4 @@ public class Triangle extends Shape
         return (side2 / 2.0) * side1;
     }
     
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public String toString(String name)
-    {
-        return name;
-    }
 }

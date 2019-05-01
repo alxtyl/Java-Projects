@@ -5,33 +5,18 @@
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Shape
+public abstract class Shape
 {
-    private double s;
-  
+    private String color;
+    protected Boolean filled;
+
     /**
      * Constructor for objects of class Shape
      */
-    public Shape(double side)
+    public Shape(String c, Boolean f)
     {
-        s = side;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public boolean shapeFilled(boolean filled)
-    {
-        if (filled == true) {
-            return true;
-        }
-        
-        else {
-            return false;
-        }
+        color = c;
+        filled = f;
     }
     
     /**
@@ -40,9 +25,23 @@ public class Shape
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public double area()
+    public abstract double area();
+
+    /**
+     * An example of a method - replace this comment with your own
+     *
+     * @param  a sample parameter for a method
+     * @return    the sum of x and y
+     */
+    public abstract double perimeter();
+
+    public String toString()
     {
-        
-        return 0.0;
+        return color;
+    }
+
+    public Boolean toBoolean() 
+    {
+        return filled;
     }
 }

@@ -7,27 +7,38 @@
  */
 public class Circle extends Shape
 {
-    // instance variables - replace the example below with your own
+    // instance variable
     private double radius;
 
     /**
      * Constructor for objects of class Circle
      */
-    public Circle()
+    public Circle(double r, String circleColor, boolean circleFilled)
     {
-        super(name);
+        super(circleColor, circleFilled);
         
+        this.radius = r;
     }
 
     /**
      * An example of a method - replace this comment with your own
      *
-     * @param  y  a sample parameter for a method
+     * @param    a sample parameter for a method
      * @return    the sum of x and y
      */
-    public int sampleMethod()
+    public double area()
     {
-        // put your code here
-        return 0;
+        return Math.PI * Math.pow(radius, 2.0);
+    }
+
+    /**
+     * An example of a method - replace this comment with your own
+     *
+     * @param    a sample parameter for a method
+     * @return    the sum of x and y
+     */
+    public double perimeter()
+    {
+        return (2.0) * Math.PI * (radius);
     }
 }
