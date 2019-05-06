@@ -1,9 +1,9 @@
 
 /**
- * Used for building the rectangle class
+ * Represents a rectangle
  *
- * @Alex Tyler
- * @5/9/19
+ * @author Alex Tyler
+ * @version 05/09/19
  */
 public class Rectangle extends Shape
 {
@@ -16,6 +16,7 @@ public class Rectangle extends Shape
      */
     public Rectangle(double l, double w, String rectColor, Boolean rectFilled)
     {
+        //initialise instance variables
         super(rectColor, rectFilled);
  
         lenght = l;
@@ -23,10 +24,10 @@ public class Rectangle extends Shape
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * area() returns the area of the rectangle
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param  none
+     * @return    the area of the rectangle
      */
     public double area()
     {
@@ -34,10 +35,10 @@ public class Rectangle extends Shape
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * perimeter() returns the perimeter of the circle
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param  none
+     * @return    the perimeter of the rectangle
      */
     public double perimeter()
     {

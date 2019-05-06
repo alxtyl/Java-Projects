@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class Circle here.
+ * Represents a circle
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Alex Tyler
+ * @version 05/09/19
  */
 public class Circle extends Shape
 {
@@ -15,16 +15,17 @@ public class Circle extends Shape
      */
     public Circle(double r, String circleColor, boolean circleFilled)
     {
+        //initialise instance variables
         super(circleColor, circleFilled);
         
         this.radius = r;
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * area() returns the area of the circle
      *
-     * @param    a sample parameter for a method
-     * @return    the sum of x and y
+     * @param  none
+     * @return    the area of the circle based on its radius
      */
     public double area()
     {
@@ -32,13 +33,13 @@ public class Circle extends Shape
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * perimeter() returns the perimeter of the circle
      *
-     * @param    a sample parameter for a method
-     * @return    the sum of x and y
+     * @param  none
+     * @return    the perimeter of the cirle
      */
     public double perimeter()
     {
-        return (2.0) * Math.PI * (radius);
+        return (2.0) * (Math.PI) * (radius);
     }
 }

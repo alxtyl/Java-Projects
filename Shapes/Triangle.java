@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class Triangle here.
+ * Represents a triangle
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Alex Tyler
+ * @version 05/09/19
  */
 public class Triangle extends Shape
 {
@@ -18,17 +18,16 @@ public class Triangle extends Shape
         // initialise instance variables
         super(triColor, triFilled);
 
-
         this.side1 = s1;
         this.side2 = s2;
         this.side3 = s3;
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * perimeter() returns the perimeter of the triangle
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param  none
+     * @return    the perimeter of the triangle
      */
     public double perimeter()
     {
@@ -36,10 +35,10 @@ public class Triangle extends Shape
     }
     
     /**
-     * An example of a method - replace this comment with your own
+     * area()
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param none
+     * @return    the area of the triangle
      */
     public double area()
     {

@@ -1,9 +1,9 @@
 
 /**
- * Implements a shape super class
+ * Implements the shape super class
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Alex Tyler
+ * @version 05/
  */
 public abstract class Shape
 {
@@ -20,26 +20,38 @@ public abstract class Shape
     }
     
     /**
-     * An example of a method - replace this comment with your own
+     * Declaring the area method for use by the sub-classes
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param  none
+     * @return    return area of shape
      */
     public abstract double area();
 
     /**
-     * An example of a method - replace this comment with your own
+     * Declaring the perimeter method for use by the sub-classes
      *
-     * @param  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param  none
+     * @return    return perimeter of shape
      */
     public abstract double perimeter();
 
+    /**
+     * toString() returns the color of the shape
+     *
+     * @param  none
+     * @return    return color of shape
+     */
     public String toString()
     {
         return color;
     }
 
+    /**
+     * toBoolean returns the color of the shape
+     *
+     * @param  none
+     * @return    true/false
+     */
     public Boolean toBoolean() 
     {
         return filled;
