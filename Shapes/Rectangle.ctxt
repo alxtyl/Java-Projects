@@ -1,13 +1,13 @@
 #BlueJ class context
 comment0.target=Rectangle
-comment0.text=\n\ Represents\ a\ rectangle\n\n\ @Alex\ Tyler\n\ @5/9/19\n
+comment0.text=\n\ Represents\ a\ rectangle\n\n\ @author\ Alex\ Tyler\n\ @version\ 05/09/19\n
 comment1.params=l\ w\ rectColor\ rectFilled
 comment1.target=Rectangle(double,\ double,\ java.lang.String,\ java.lang.Boolean)
 comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Rectangle\n
 comment2.params=
 comment2.target=double\ area()
-comment2.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\n
+comment2.text=\n\ area()\ returns\ the\ area\ of\ the\ rectangle\n\n\ @param\ \ none\n\ @return\ \ \ \ the\ area\ of\ the\ rectangle\n
 comment3.params=
 comment3.target=double\ perimeter()
-comment3.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\n
+comment3.text=\n\ perimeter()\ returns\ the\ perimeter\ of\ the\ rectangle\n\n\ @param\ \ none\n\ @return\ \ \ \ the\ perimeter\ of\ the\ rectangle\n
 numComments=4
