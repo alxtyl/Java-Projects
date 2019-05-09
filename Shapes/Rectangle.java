@@ -8,7 +8,8 @@
 public class Rectangle extends Shape
 {
     // instance variables
-    private double lenght, width;
+    private double lenght;
+    private double width;
 
     /**
      * Constructor for objects of class Rectangle
@@ -43,6 +44,4 @@ public class Rectangle extends Shape
     {
         return 2 * (lenght + width);
     }
-
-    
 }

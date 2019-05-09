@@ -9,9 +9,5 @@ comment2.target=double\ perimeter()
 comment2.text=\n\ perimeter()\ returns\ the\ perimeter\ of\ the\ triangle\n\n\ @param\ \ none\n\ @return\ \ \ \ the\ perimeter\ of\ the\ triangle\n
 comment3.params=
 comment3.target=double\ area()
-<<<<<<< HEAD
-comment3.text=\n\ area()\n\n\ @param\ none\n\ @return\ \ \ \ the\ area\ of\ the\ triangle\n
-=======
 comment3.text=\n\ area()\ returns\ the\ area\ of\ the\ triangle\n\n\ @param\ none\n\ @return\ \ \ \ the\ area\ of\ the\ triangle\n
->>>>>>> b9f1973df2a748d94c9c6e306e08a1df86d65c7e
 numComments=4

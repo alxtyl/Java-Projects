@@ -1,0 +1,17 @@
+Starting shapes
+Triangle[color=white, filled=true]
+Perimeter is: 7.50
+Area is: 3.75
+
+Rectangle[color=red, filled=true]
+Perimeter is: 12.00
+Area is: 8.00
+
+Circle[color=yellow, filled=false]
+Perimeter is: 6.28
+Area is: 3.14
+
+Changed shapes
+Triangle[color=white, filled=false]
+Rectangle[color=blue, filled=true]
+Circle[color=black, filled=true]

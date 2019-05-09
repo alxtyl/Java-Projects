@@ -3,11 +3,11 @@
  * Implements the shape super class
  *
  * @author Alex Tyler
- * @version 05/
+ * @version 05/09/19
  */
 public abstract class Shape
 {
-    // instance variables
+    //instance variables
     private String color;
     private Boolean filled;
 
@@ -22,7 +22,7 @@ public abstract class Shape
     }
     
     /**
-     * Declares the area method for use by the sub-classes
+     * Declaring the area method for use by the sub-classes
      *
      * @param  none
      * @return    return area of shape
@@ -30,7 +30,7 @@ public abstract class Shape
     public abstract double area();
 
     /**
-     * Declares the perimeter method for use by the sub-classes
+     * Declaring the perimeter method for use by the sub-classes
      *
      * @param  none
      * @return    return perimeter of shape
@@ -49,7 +49,7 @@ public abstract class Shape
     }
 
     /**
-     * toBoolean returns true/false based on the shape being full or not
+     * toBoolean() returns the color of the shape
      *
      * @param  none
      * @return    true/false
