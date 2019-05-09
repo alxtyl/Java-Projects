@@ -44,4 +44,19 @@ public class Triangle extends Shape
     {
         return side1 + side2 + side3;
     }
+
+    /**
+     * getSides returns the sides of the triangle
+     *
+     * @param  none
+     * @return    formated string
+     */
+    public String getSides()
+    {
+        String out = "";
+
+        out = String.format("[side1= %.1f, side2 = %.1f, side3 = %.1f]", side1, side2, side3);
+
+        return out;
+    }
 }

@@ -42,4 +42,19 @@ public class Circle extends Shape
     {
         return (2.0) * (Math.PI) * (radius);
     }
+
+    /**
+     * getSides returns the sides of the circle
+     *
+     * @param  none
+     * @return    formated string
+     */
+    public String getSides()
+    {
+        String out = "";
+
+        out = String.format("[radius= %.1f]", radius);
+
+        return out;
+    }
 }

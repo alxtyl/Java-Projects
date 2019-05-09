@@ -31,7 +31,7 @@ public class Tester
 
         //traversing through the array list and printing info
         for (Shape arrayShape : shapes) {
-            System.out.println(arrayShape.getClass().getName() + "[color=" + arrayShape.toString() + ", filled=" + arrayShape.toBoolean() + "]");
+            System.out.println(arrayShape.getClass().getName() + "[color=" + arrayShape.toString() + ", filled=" + arrayShape.toBoolean() + "]" + arrayShape.getSides()); 
             
             //printing out perimeter and area of the shapes
             System.out.printf("Perimeter is: %.2f\n", arrayShape.perimeter());
@@ -47,7 +47,7 @@ public class Tester
         
         //traversing through the array list and printing updated info
         for (Shape arrayShape : shapes) {
-            System.out.println(arrayShape.getClass().getName() + "[color=" + arrayShape.toString() + ", filled=" + arrayShape.toBoolean() + "]");
+            System.out.println(arrayShape.getClass().getName() + "[color=" + arrayShape.toString() + ", filled=" + arrayShape.toBoolean() + "]" + "");
         }
     }
 }

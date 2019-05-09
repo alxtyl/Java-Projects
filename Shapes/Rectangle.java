@@ -43,4 +43,19 @@ public class Rectangle extends Shape
     {
         return 2 * (lenght + width);
     }
+
+    /**
+     * getSides() returns the length and width of the rectangle
+     *
+     * @param  none
+     * @return    formated string
+     */
+    public String getSides()
+    {
+        String out = "";
+
+        out = String.format("[length= %.1f, width = %.1f]", lenght, width);
+
+        return out;
+    }
 }

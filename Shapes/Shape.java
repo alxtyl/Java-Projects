@@ -38,6 +38,16 @@ public abstract class Shape
     public abstract double perimeter();
 
     /**
+     * Declaring the getSide1 method for use by the sub-classes
+     *
+     * @param  none
+     * @return    void
+     */
+    public abstract String getSides();
+
+    
+
+    /**
      * toString() returns the color of the shape
      *
      * @param  none
