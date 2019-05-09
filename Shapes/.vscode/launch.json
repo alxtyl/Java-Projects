@@ -4,6 +4,12 @@
             "type": "java",
             "name": "CodeLens (Launch) - Tester",
             "request": "launch",
+            "mainClass": "Tester"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Tester",
+            "request": "launch",
             "mainClass": "Tester",
             "projectName": "Shapes_791851f4"
         }

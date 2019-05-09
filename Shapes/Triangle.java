@@ -35,7 +35,7 @@ public class Triangle extends Shape
     }
     
     /**
-     * area()
+     * area() returns the area of the triangle
      *
      * @param none
      * @return    the area of the triangle

@@ -9,5 +9,9 @@ comment2.target=double\ area()
 comment2.text=\n\ area()\ returns\ the\ area\ of\ the\ rectangle\n\n\ @param\ \ none\n\ @return\ \ \ \ the\ area\ of\ the\ rectangle\n
 comment3.params=
 comment3.target=double\ perimeter()
+<<<<<<< HEAD
 comment3.text=\n\ perimeter()\ returns\ the\ perimeter\ of\ the\ circle\n\n\ @param\ \ none\n\ @return\ \ \ \ the\ perimeter\ of\ the\ rectangle\n
+=======
+comment3.text=\n\ perimeter()\ returns\ the\ perimeter\ of\ the\ rectangle\n\n\ @param\ \ none\n\ @return\ \ \ \ the\ perimeter\ of\ the\ rectangle\n
+>>>>>>> b9f1973df2a748d94c9c6e306e08a1df86d65c7e
 numComments=4

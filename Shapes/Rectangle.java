@@ -8,8 +8,7 @@
 public class Rectangle extends Shape
 {
     // instance variables
-    private double lenght;
-    private double width;
+    private double lenght, width;
 
     /**
      * Constructor for objects of class Rectangle
@@ -19,8 +18,8 @@ public class Rectangle extends Shape
         //initialise instance variables
         super(rectColor, rectFilled);
  
-        lenght = l;
-        width = w;
+        this.lenght = l;
+        this.width = w;
     }
 
     /**
@@ -35,7 +34,7 @@ public class Rectangle extends Shape
     }
 
     /**
-     * perimeter() returns the perimeter of the circle
+     * perimeter() returns the perimeter of the rectangle
      *
      * @param  none
      * @return    the perimeter of the rectangle

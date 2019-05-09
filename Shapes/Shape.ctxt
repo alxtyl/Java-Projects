@@ -6,14 +6,25 @@ comment1.target=Shape(java.lang.String,\ java.lang.Boolean)
 comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Shape\n
 comment2.params=
 comment2.target=double\ area()
+<<<<<<< HEAD
 comment2.text=\n\ Declaring\ the\ area\ method\ for\ use\ by\ the\ sub-classes\n\n\ @param\ \ none\n\ @return\ \ \ \ return\ area\ of\ shape\n
 comment3.params=
 comment3.target=double\ perimeter()
 comment3.text=\n\ Declaring\ the\ perimeter\ method\ for\ use\ by\ the\ sub-classes\n\n\ @param\ \ none\n\ @return\ \ \ \ return\ perimeter\ of\ shape\n
+=======
+comment2.text=\n\ Declares\ the\ area\ method\ for\ use\ by\ the\ sub-classes\n\n\ @param\ \ none\n\ @return\ \ \ \ return\ area\ of\ shape\n
+comment3.params=
+comment3.target=double\ perimeter()
+comment3.text=\n\ Declares\ the\ perimeter\ method\ for\ use\ by\ the\ sub-classes\n\n\ @param\ \ none\n\ @return\ \ \ \ return\ perimeter\ of\ shape\n
+>>>>>>> b9f1973df2a748d94c9c6e306e08a1df86d65c7e
 comment4.params=
 comment4.target=java.lang.String\ toString()
 comment4.text=\n\ toString()\ returns\ the\ color\ of\ the\ shape\n\n\ @param\ \ none\n\ @return\ \ \ \ return\ color\ of\ shape\n
 comment5.params=
 comment5.target=java.lang.Boolean\ toBoolean()
+<<<<<<< HEAD
 comment5.text=\n\ toBoolean\ returns\ the\ color\ of\ the\ shape\n\n\ @param\ \ none\n\ @return\ \ \ \ true/false\n
+=======
+comment5.text=\n\ toBoolean\ returns\ true/false\ based\ on\ the\ shape\ being\ full\ or\ not\n\n\ @param\ \ none\n\ @return\ \ \ \ true/false\n
+>>>>>>> b9f1973df2a748d94c9c6e306e08a1df86d65c7e
 numComments=6

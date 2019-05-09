@@ -7,20 +7,22 @@
  */
 public abstract class Shape
 {
+    // instance variables
     private String color;
-    protected Boolean filled;
+    private Boolean filled;
 
     /**
      * Constructor for objects of class Shape
      */
     public Shape(String c, Boolean f)
     {
-        color = c;
-        filled = f;
+        //initialise instance variables
+        this.color = c;
+        this.filled = f;
     }
     
     /**
-     * Declaring the area method for use by the sub-classes
+     * Declares the area method for use by the sub-classes
      *
      * @param  none
      * @return    return area of shape
@@ -28,7 +30,7 @@ public abstract class Shape
     public abstract double area();
 
     /**
-     * Declaring the perimeter method for use by the sub-classes
+     * Declares the perimeter method for use by the sub-classes
      *
      * @param  none
      * @return    return perimeter of shape
@@ -47,7 +49,7 @@ public abstract class Shape
     }
 
     /**
-     * toBoolean returns the color of the shape
+     * toBoolean returns true/false based on the shape being full or not
      *
      * @param  none
      * @return    true/false
