@@ -45,8 +45,6 @@ public abstract class Shape
      */
     public abstract String getSides();
 
-    
-
     /**
      * toString() returns the color of the shape
      *
