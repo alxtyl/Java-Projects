@@ -7,9 +7,8 @@
  */
 public class Rectangle extends Shape
 {
-    // instance variables
-    private double lenght;
-    private double width;
+    //instance variables
+    private double lenght, width;
 
     /**
      * Constructor for objects of class Rectangle
