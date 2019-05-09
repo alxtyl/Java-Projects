@@ -7,7 +7,7 @@
  */
 public class Circle extends Shape
 {
-    // instance variable
+    //instance variable
     private double radius;
 
     /**

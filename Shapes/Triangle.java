@@ -7,7 +7,7 @@
  */
 public class Triangle extends Shape
 {
-    // instance variables
+    //instance variables
     private double side1, side2, side3;
     
     /**
@@ -15,12 +15,23 @@ public class Triangle extends Shape
      */
     public Triangle(double s1, double s2, double s3, String triColor, boolean triFilled)
     {
-        // initialise instance variables
+        // nitialise instance variables
         super(triColor, triFilled);
 
         this.side1 = s1;
         this.side2 = s2;
         this.side3 = s3;
+    }
+
+    /**
+     * area() returns the area of the triangle
+     *
+     * @param none
+     * @return    the area of the triangle
+     */
+    public double area()
+    {
+        return (side2 / 2.0) * side1;
     }
 
     /**
@@ -33,16 +44,4 @@ public class Triangle extends Shape
     {
         return side1 + side2 + side3;
     }
-    
-    /**
-     * area() returns the area of the triangle
-     *
-     * @param none
-     * @return    the area of the triangle
-     */
-    public double area()
-    {
-        return (side2 / 2.0) * side1;
-    }
-    
 }
