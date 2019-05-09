@@ -38,10 +38,10 @@ public abstract class Shape
     public abstract double perimeter();
 
     /**
-     * Declaring the getSide1 method for use by the sub-classes
+     * Declaring the getSides method for use by the sub-classes
      *
      * @param  none
-     * @return    void
+     * @return    formated string
      */
     public abstract String getSides();
 
