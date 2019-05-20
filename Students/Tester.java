@@ -14,13 +14,17 @@ public class Tester
      */
     public static void main(String [] args) throws IOException
     {
-       PrintWriter printWriter = new PrintWriter(new File("output.txt")); // Creates PrintWriter to output.txt file
-       Students students = new Students(); // Creates students                           
-       students.readFile(); // Creates students from data file
-       students.printData(printWriter); // Displays all student data
-       students.printHigh(printWriter); // Displays student with the highest GPA
-       students.printAvgGpa(printWriter); // Displays average GPA
-       students.youngestBelowAvg(printWriter); // Displays youngest student with GPA below avg
-       printWriter.close(); // Closes file 
+       PrintWriter printWriter = new PrintWriter(new File("output.txt")); //creates PrintWriter to output.txt file
+       Students students = new Students(); //creates students       
+
+       students.readFile(); //creates students from data file
+       students.printData(printWriter); //displays all student data
+       students.printHigh(printWriter); //displays student with the highest GPA
+       students.printAvgGpa(printWriter); //displays average the GPA
+       students.averageStats(printWriter); //displays the students above the average GPA 
+       
+       students.youngestBelowAvg(printWriter); //displays youngest student with GPA below average
+
+       printWriter.close(); //closes file 
     }
 }
