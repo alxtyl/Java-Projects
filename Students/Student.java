@@ -2,7 +2,7 @@
  * The Student class tracks the information of one student
  * 
  * @author Alex Tyler
- * @version 05
+ * @version 05/21/19
  */
 public class Student
 {
