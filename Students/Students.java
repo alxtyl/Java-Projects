@@ -152,7 +152,7 @@ public class Students
        double average = calcAverageGPA(); 
 
        for (int i = 0; i < this.students.size(); i++) {
-            if(this.students.get(i).getGPA() < average) {
+            if (this.students.get(i).getGPA() < average) {
                 belowAverage.add(this.students.get(i)); //checks if GPA is below aveage and adds to array
             }
        }
@@ -172,7 +172,7 @@ public class Students
        double average = calcAverageGPA();
 
        for (int i = 0; i < this.students.size(); i++) {
-            if(this.students.get(i).getGPA() > average) {
+            if (this.students.get(i).getGPA() > average) {
                 aboveAverage.add(this.students.get(i)); //checks if GPA is above average and adds to array
             }
        }
@@ -215,8 +215,8 @@ public class Students
       pw.println("6. The students above average: ");
 
       for (int i = 0; i < this.students.size(); i++) {
-          if(this.students.get(i).getGPA() > average) {
-              aboveAverage.add(this.students.get(i));
+          if (this.students.get(i).getGPA() > average) {
+              aboveAverage.add(this.students.get(i)); //the method above could have been used, but the spacing was not as nice
               System.out.println(this.students.get(i));
               pw.println(this.students.get(i));
           }
@@ -264,7 +264,7 @@ public class Students
       
       //finding the total age of the students
       for (int i = 0; i < this.students.size(); i++) {
-           if(this.students.get(i).getGPA() < average) {
+           if (this.students.get(i).getGPA() < average) {
               totalAge += this.students.get(i).getAge();
            }
       }
