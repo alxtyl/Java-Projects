@@ -12,8 +12,8 @@ public class Student
    private double gpa; 
    
    /**
-   * Constructor for an individual student
-   */
+    * Constructor for an individual student
+    */
    public Student(String name, int age, double gpa)
    {
        this.name = name;
@@ -23,7 +23,9 @@ public class Student
 
    /**
     * Formats and returns students information in a string
-    * @return - String with the name, age, and gpa of student
+    *
+    * @param void
+    * @return String with the name, age, and gpa of student
     */
    public String toString()
    {
@@ -32,6 +34,9 @@ public class Student
    }
 
    /**
+    * Returns student name
+    *
+    * @param void
     * @return name
     */
    public String getName()
@@ -40,6 +45,9 @@ public class Student
    }
 
    /** 
+    * Returns student age
+    *
+    * @param void
     * @return age
     */
    public int getAge()
@@ -48,9 +56,12 @@ public class Student
    }
 
    /** 
-    * @return gpa
+    * Returns GPA
+    *
+    * @param void
+    * @return GPA
     */
-   public double getGpa()
+   public double getGPA()
    {
        return gpa;
    }   

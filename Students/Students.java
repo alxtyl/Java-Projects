@@ -1,6 +1,6 @@
+import java.io.IOException;
 import java.util.*;
 import java.io.*;
-import java.io.IOException;
 /**
  * The Students class is used to store and process many Student objects.
  * 
@@ -33,12 +33,12 @@ public class Students
        File file = new File(fileName);
        Scanner fileScanner = new Scanner(file); //reads from a file of student data
       
-            while(fileScanner.hasNextLine()) {
+       while(fileScanner.hasNextLine()) {
            String name = fileScanner.nextLine();         
            int age = Integer.parseInt(fileScanner.nextLine().trim());
-           double gpa = Double.parseDouble(fileScanner.nextLine().trim());
+           double GPA = Double.parseDouble(fileScanner.nextLine().trim());
     
-           students.add(new Student(name, age, gpa)); //gets student information and creates a new student object
+           students.add(new Student(name, age, GPA)); //gets student information and creates a new student object
        }
        
        fileScanner.close(); //closing the file
@@ -56,7 +56,7 @@ public class Students
 
        for (Student s:students) {
            sb.append(s);
-           sb.append("\r\n");
+           sb.append("\n");
        }
        
        return sb.toString();
@@ -73,13 +73,13 @@ public class Students
        //writes to file
        pw.println("2. All students in the database");
        pw.println("--------------------------");
-       pw.println("\n" + this.toString());
+       pw.println(toString());
        pw.println();
        
        //writes to display
        System.out.println("2. All students in the database");
        System.out.println("--------------------------");
-       System.out.println(this.toString());
+       System.out.println(toString());
    }
 
    /**
@@ -91,18 +91,20 @@ public class Students
     */
    public void printHigh(PrintWriter pw) 
    {
-       double gpa = 0.0;
+       double GPA = 0.0;
        int index = 0;
        
        for (int i = 0; i < students.size(); ++i) {
-           if (students.get(i).getGpa() > gpa) {
-               gpa = students.get(i).getGpa();
-               index = i; //saves index of student with best gpa  
+           if (students.get(i).getGPA() > GPA) {
+               GPA = students.get(i).getGPA();
+               index = i; //saves index of student with best GPA  
            }
        }
        
        System.out.println("3. The student with the best GPA is:\n" + students.get(index));
-       pw.println("3. The student with the best GPA is:\r\n" + students.get(index));
+       pw.println("3. The student with the best GPA is:\n" + students.get(index));
+       System.out.println();
+       pw.println();
     }
 
    /**
@@ -111,16 +113,16 @@ public class Students
     * @param void
     * @return average GPA
     */
-   public double calcAvgGpa() 
+   public double calcAverageGPA() 
    {
-       double totalGpa = 0.0;
+       double totalGPA = 0.0;
 
        for (Student s:students) {
-            totalGpa += s.getGpa();
+            totalGPA += s.getGPA();
        }
 
-       return totalGpa / students.size(); //returns the average GPA
-    }
+       return totalGPA / students.size(); //returns the average GPA
+   }
 
    /**
     * Writes average GPA to display and file
@@ -128,12 +130,12 @@ public class Students
     * @param PrintWriter to write to file
     * @return void
     */
-   public void printAvgGpa(PrintWriter pw)
-   {
-       double avg = calcAvgGpa();
+   public void printAverageGPA(PrintWriter pw)
+    {
+       double average = calcAverageGPA();
 
-       System.out.printf("4. Average GPA: %.2f", avg); //writes average GPA to display and file
-       pw.printf("4. Average GPA: %.2f", avg);
+       System.out.printf("4. Average GPA: %.2f\n", average); //writes average GPA to display and file
+       pw.printf("4. Average GPA: %.2f\n", average);
        System.out.println();
        pw.println();
     }
@@ -144,16 +146,16 @@ public class Students
     * @param void
     * @return array list of below average students 
     */
-   public ArrayList<Student> belowAverage() 
-   {
+    public ArrayList<Student> belowAverage() 
+    {
        ArrayList<Student> belowAverage = new ArrayList<Student>(); 
-       double avg = calcAvgGpa(); 
+       double average = calcAverageGPA(); 
 
        for (int i = 0; i < this.students.size(); i++) {
-            if(this.students.get(i).getGpa() < avg) {
+            if(this.students.get(i).getGPA() < average) {
                 belowAverage.add(this.students.get(i)); //checks if GPA is below aveage and adds to array
             }
-        }
+       }
         
        return belowAverage;
     }
@@ -164,13 +166,13 @@ public class Students
     * @param void
     * @return array list of above average students
     */
-   public ArrayList<Student> aboveAverage() 
+    public ArrayList<Student> aboveAverage() 
     {
        ArrayList<Student> aboveAverage = new ArrayList<Student>(); 
-       double avg = calcAvgGpa(); 
+       double average = calcAverageGPA();
 
        for (int i = 0; i < this.students.size(); i++) {
-            if(this.students.get(i).getGpa() < avg) {
+            if(this.students.get(i).getGPA() > average) {
                 aboveAverage.add(this.students.get(i)); //checks if GPA is above average and adds to array
             }
        }
@@ -179,7 +181,7 @@ public class Students
     }
 
    /**
-    * Writes the number of above average students to display and file
+    * Writes the number of above / below average students to display and file
     * 
     * @param PrintWriter to write to file
     * @return void
@@ -191,30 +193,86 @@ public class Students
       numAboveAverage = aboveAverage().size();
       numBelowAverage = belowAverage().size();
 
-      System.out.println("5. Above / below average GPA: " + numAboveAverage + ", " + numBelowAverage);
-      pw.println("5. Above / below average GPA: " + numAboveAverage + ":" + numBelowAverage);
+      System.out.println("5. Above / below average GPA: " + numAboveAverage + " , " + numBelowAverage);
+      pw.println("5. Above / below average GPA: " + numAboveAverage + " , " + numBelowAverage);
+
+      System.out.println();
+      pw.println();
    }
-   
-     
+
    /**
-     * Searches the array of below average students and displays the youngest
+     * Writes the above average students to display and file
      * 
      * @param PrintWriter to write to file
+     * @return void
      */
-   public void youngestBelowAvg(PrintWriter pw)
-    {
-      ArrayList<Student> belowAvgStudents = belowAverage(); 
+   public void studentAboveAverageInfo(PrintWriter pw)
+   {
+      ArrayList<Student> aboveAverage = new ArrayList<Student>(); 
+      double average = calcAverageGPA();
 
-      Student temp = belowAvgStudents.get(0);
-      for (int i = 1; i < belowAvgStudents.size(); ++i) {
-           if (belowAvgStudents.get(i).getAge() < temp.getAge()) { //searches below average array for youngest
-               temp = belowAvgStudents.get(i);
+      System.out.println("6. The students above average: ");
+      pw.println("6. The students above average: ");
+
+      for (int i = 0; i < this.students.size(); i++) {
+          if(this.students.get(i).getGPA() > average) {
+              aboveAverage.add(this.students.get(i));
+              System.out.println(this.students.get(i));
+              pw.println(this.students.get(i));
+          }
+      }
+
+      System.out.println();
+      pw.println();
+   }
+  
+   /**
+    * Searches the array of below average students and displays the youngest
+    * 
+    * @param PrintWriter to write to file
+    * @return void
+    */
+   public void youngestBelowAverage(PrintWriter pw)
+   {
+      ArrayList<Student> belowAverageStudents = belowAverage(); 
+
+      Student temp = belowAverageStudents.get(0);
+      for (int i = 1; i < belowAverageStudents.size(); ++i) {
+           if (belowAverageStudents.get(i).getAge() < temp.getAge()) { //searches below average array for youngest
+               temp = belowAverageStudents.get(i);
            }
       }
       
       System.out.println("7. The youngest student with below average GPA is:\n" + temp.toString());
-      pw.println("7. The youngest student below avarage GPA is:\r\n" + temp.toString());
+      pw.println("7. The youngest student below avarage GPA is:\n" + temp.toString());
       System.out.println();
       pw.println(); 
-    }
+   }
+
+   /**
+    * Searches the array of below average students and displays the youngest
+    * 
+    * @param PrintWriter to write to file
+    * @return void
+    */
+   public void averageAgeBelow(PrintWriter pw)
+   {
+      double totalAge = 0.0;
+      double averageAge = 0.0;
+      double numBelowAverage = 0.0;
+      double average = calcAverageGPA();
+      
+      //finding the total age of the students
+      for (int i = 0; i < this.students.size(); i++) {
+           if(this.students.get(i).getGPA() < average) {
+              totalAge += this.students.get(i).getAge();
+           }
+      }
+
+      numBelowAverage = belowAverage().size();   
+      averageAge = totalAge / numBelowAverage; //finding the average by div the comb age of the students with the number of below average students
+
+      System.out.printf("8. The average age of the students with below average GPA is: %.2f", averageAge);
+      pw.printf("8. The average age of the students with below average GPA is: %.2f", averageAge);
+   }
 }
