@@ -74,7 +74,6 @@ public class Students
        pw.println("2. All students in the database");
        pw.println("--------------------------");
        pw.println(toString());
-       pw.println();
        
        //writes to display
        System.out.println("2. All students in the database");

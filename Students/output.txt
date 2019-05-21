@@ -13,7 +13,6 @@ Name7          19     3.19
 Name8          18     2.37
 Name9          21     1.01
 
-
 3. The student with the best GPA is:
 Name3          18     3.91
 
