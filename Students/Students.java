@@ -140,7 +140,7 @@ public class Students
     }
 
    /**
-    * Creates an array list of below average students
+    * Creates an arraylist of below average students
     * 
     * @param void
     * @return array list of below average students 
@@ -160,7 +160,7 @@ public class Students
     }
  
    /**
-    * Creates an array list of above average students
+    * Creates an arraylist of above average students
     * 
     * @param void
     * @return array list of above average students
@@ -215,7 +215,7 @@ public class Students
 
       for (int i = 0; i < this.students.size(); i++) {
           if (this.students.get(i).getGPA() > average) {
-              aboveAverage.add(this.students.get(i)); //the method above could have been used, but the spacing was not as nice
+              aboveAverage.add(this.students.get(i)); //the method above could have been used, but the spacing was not as nices
               System.out.println(this.students.get(i));
               pw.println(this.students.get(i));
           }
@@ -226,7 +226,7 @@ public class Students
    }
   
    /**
-    * Searches the array of below average students and displays the youngest
+    * Searches the arraylist of below average students and displays the youngest
     * 
     * @param PrintWriter to write to file
     * @return void

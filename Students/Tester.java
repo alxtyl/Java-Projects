@@ -18,8 +18,8 @@ public class Tester
        PrintWriter printWriter = new PrintWriter(new File("output.txt")); //creates PrintWriter to output.txt file
               
        students.readFile(); //reads in students' info from data file
-       System.out.println("1. Read data file into Students\n");
-       printWriter.println("1. Read data file into Students\n");
+       System.out.println("1. Read data file into Students\n");//displaying that the student file was read in
+       printWriter.println("1. Read data file into Students\n");//writing that the student file was read in
        students.printData(printWriter); //displays all student data
        students.printHigh(printWriter); //displays student with the highest GPA
        students.printAverageGPA(printWriter); //displays average the GPA
@@ -28,6 +28,6 @@ public class Tester
        students.youngestBelowAverage(printWriter); //displays youngest student with GPA below average
        students.averageAgeBelow(printWriter); //displays the average age of the students with a below average GPA       
 
-       printWriter.close(); //closes file 
+       printWriter.close(); //closing file 
     }
 }

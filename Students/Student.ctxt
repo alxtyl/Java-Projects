@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Student
+comment0.text=\r\n\ The\ Student\ class\ tracks\ the\ information\ of\ one\ student\r\n\ \r\n\ @author\ Alex\ Tyler\r\n\ @version\ 05/21/19\r\n
+comment1.params=name\ age\ gpa
+comment1.target=Student(java.lang.String,\ int,\ double)
+comment1.text=\r\n\ Constructor\ for\ an\ individual\ student\r\n
+comment2.params=
+comment2.target=java.lang.String\ toString()
+comment2.text=\r\n\ Formats\ and\ returns\ students\ information\ in\ a\ string\r\n\r\n\ @param\ void\r\n\ @return\ String\ with\ the\ name,\ age,\ and\ gpa\ of\ student\r\n
+comment3.params=
+comment3.target=java.lang.String\ getName()
+comment3.text=\r\n\ Returns\ student\ name\r\n\r\n\ @param\ void\r\n\ @return\ name\r\n
+comment4.params=
+comment4.target=int\ getAge()
+comment4.text=\ \r\n\ Returns\ student\ age\r\n\r\n\ @param\ void\r\n\ @return\ age\r\n
+comment5.params=
+comment5.target=double\ getGPA()
+comment5.text=\ \r\n\ Returns\ GPA\r\n\r\n\ @param\ void\r\n\ @return\ GPA\r\n
+numComments=6
