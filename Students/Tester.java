@@ -18,6 +18,8 @@ public class Tester
        PrintWriter printWriter = new PrintWriter(new File("output.txt")); //creates PrintWriter to output.txt file
               
        students.readFile(); //reads in students' info from data file
+       System.out.println("1. Read data file into Students\n");
+       printWriter.println("1. Read data file into Students\n");
        students.printData(printWriter); //displays all student data
        students.printHigh(printWriter); //displays student with the highest GPA
        students.printAverageGPA(printWriter); //displays average the GPA
