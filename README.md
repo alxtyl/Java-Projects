@@ -1,3 +1,3 @@
-# Java-Homework
+# Java-Projects
 
-For whatever happens in CSCI 114, this is where I will keep all record of it.
+Projects from my second semester programming class
